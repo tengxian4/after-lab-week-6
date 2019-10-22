@@ -1,0 +1,55 @@
+ //labweek 6.cpp gym selection 
+
+#include <iostream> 
+using namespace std; 
+void subscription2();  
+void subscription1() 
+{     
+    int months; 
+    cout << "How many month you would like to subcribe? "; 
+    cin >> months; 
+    cout << "The subscription fees is "; 
+    cout << months * 50 << endl; 
+    cout << "TQ for using our gym services";     
+} 
+ 
+int main() 
+{ 
+    int choice, months; 
+    do 
+    { 
+        cout << "\nThis is a gym menu "; 
+        cout << "\nPlease enter your choice for this menu :\n"; 
+        cout << "1:Adult Gym\n2.Kids Gym\n3.Senior Citizen Gym\n4.Exit the menu\n"; 
+        cin >> choice; 
+        switch (choice) 
+        { 
+
+        case 1:cout << "Adult gym (Price is RM50)\n"; 
+            subscription1(); 
+            break; 
+        case 2: cout << "Kids Gym(Price is RM20)\n"; 
+            subscription2(); 
+            break; 
+        case 3:cout << "Senior Citizen Gym is FREE!!!\n"; 
+            cout << "IT'S FREEEEEEEEEEEE!!!!!!!!!!"; 
+            break; 
+        case 4:cout << "Exit the menu\n"; 
+            break; 
+        default:cout << "please enter number between 1-3\n"; 
+        } 
+
+    } while (choice != 4); 
+    cout << "TQ for using our gym services"; 
+} 
+
+void subscription2() 
+{ 
+    int months; 
+    char yesOrNo; 
+    cout << "How many month you would like to subcribe? "; 
+    cin >> months; 
+    cout << "The subscription fees is "; 
+    cout << months * 20 << endl; 
+    cout << "TQ for using our gym services"; 
+} 
