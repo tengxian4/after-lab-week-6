@@ -1,0 +1,26 @@
+
+// this is a program show number of kilometeres per gallon
+#include "pch.h"
+#include <iostream>
+using namespace std;
+const double gallonPerLiter = 0.264179;
+double kilometresPerGallon(double,double );
+
+int main()
+{
+	double litres, kilometers;
+	cout << "Please enter number of litres of petrol consumed by your car :";
+	cin >> litres;
+	cout << "Please enter number of kilometers travelled by the car :";
+	cin >> kilometers;
+	kilometresPerGallon(litres, kilometers);
+	cout << "The number of kilometres per gallon the car delivered :";
+	cout << kilometers /( litres * gallonPerLiter);
+
+	
+}
+double kilometresPerGallon(double litres, double kilometers)
+{
+	return kilometers / (litres * gallonPerLiter);
+
+}
