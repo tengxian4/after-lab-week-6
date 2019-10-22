@@ -1,0 +1,35 @@
+// lab7.cpp swap numbers ( question 2 pg79)
+//use the pass by reference - &
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+void swap(float y,float x);
+
+int main()
+{
+	float  x, y;
+	cout << "please enter values for x and y:";
+	cin >> x >> y;
+	swap(x, y);//function call to swap and the display is done in it
+
+	cout << "\nX in main is :" << x << endl;
+	cout << "Y in main is :" << y << endl;
+    return 0;
+}
+//define the function
+void swap(float x,float y)
+{
+	
+	
+	cout << "you entered x is " << x << endl;
+	cout << "you entered y is " << y << endl;
+	//do swapping algorithm
+	float temp;
+	temp = x;
+	x = y;
+	y = temp;
+	cout << "After swap the value x now is: " << x;
+	cout << "\nAfter swap the value y now is: " << y;
+
+}
