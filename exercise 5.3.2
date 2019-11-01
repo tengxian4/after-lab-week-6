@@ -1,0 +1,113 @@
+// this is a program perform several function between two number.
+// 1)output all odd numbers between two number. 2)output sum of all even numbers between two numbers.
+// 3)output the numbers and their squares between 1 and 10. 4) output the sum of square of the odd numbers between two number.
+# include "pch.h"
+#include <iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+	int firstNum, secondNum,oddNum =0;
+	
+		cout << " Please enter two numbers\nThe first number must less than second number\nThe first number :";
+		cin >> firstNum;
+		cout << "\nThe second number : ";
+		cin >> secondNum;
+
+		while (firstNum > secondNum)
+		{
+			cout << "Please enter two numbers with the first number must less than second number\nThe first number : ";
+			cin >> firstNum;
+			cout << "The second number : ";
+			cin >> secondNum;
+		}
+	
+	if (firstNum + 1 == secondNum)
+	{
+		cout << "there is no odd number, sum of even numbers, number and their squares and sum of square of the odd number. ";
+		exit(0);
+	}
+	if (firstNum % 2 != 0)
+	{
+		cout << "The odd number between both number is" <<firstNum + 2 << endl;
+		oddNum = firstNum + 2;
+		while (oddNum + 2 < secondNum)
+		{
+			oddNum += 2;
+			cout << "The odd number between both number is" << oddNum << endl;
+		}
+	}
+	else
+	{
+		oddNum = firstNum + 1;
+		cout << "The odd number between both number is" << oddNum << endl;
+		while (oddNum + 2 <= secondNum)
+		{
+			oddNum += 2;
+			cout << "The odd number between both number is" << oddNum << endl;
+		}
+
+	}
+
+	if (firstNum % 2 != 0)
+	{
+		int evenNum;
+		evenNum = firstNum + 1;
+		cout <<  "The sum of even number between both number is ";
+		int sum = 0;
+		while (evenNum +2 <= secondNum)
+		{			
+			sum = sum + evenNum;
+			evenNum += 2;	
+
+		}
+		cout << sum << endl;
+	}
+	else
+	{
+		cout << "The sum of even number between both number is ";
+		int evenNum, sum = 0;
+		evenNum = firstNum;
+		while (evenNum +2 <= secondNum)
+		{
+			sum = sum + evenNum;
+			evenNum += 2;
+		}
+		cout << sum <<endl;
+	}
+	if (firstNum > 1 && secondNum < 10)
+	{
+		int number = firstNum+1;
+		while (number < secondNum)
+		{
+			cout << "The number between 1 to 10 is " << number ;
+			cout << "and its square "<<pow(number, 2) << endl;
+			number++;
+		}
+	}
+	int squared,sum=0;
+	if (firstNum % 2 != 0)
+	{
+		oddNum = firstNum + 2;
+		while (oddNum + 2 <= secondNum)
+		{
+			squared= pow(oddNum, 2);
+			oddNum += 2;
+			sum = sum + squared;
+		}
+	}
+	else
+	{
+		oddNum = firstNum + 1;
+		while (oddNum + 2 < secondNum)
+		{
+			squared = pow(oddNum, 2);
+			oddNum += 2;
+			sum = sum + squared;
+		}
+	}
+	cout << "The sum of the square of the odd numbers :"<< sum << endl;
+
+
+		
+}
