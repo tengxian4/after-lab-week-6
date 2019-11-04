@@ -1,0 +1,30 @@
+// This is program to check odd, even and zero number
+#include "pch.h"
+#include <iostream>
+using namespace std;
+int main()
+{
+	int numb, evenNumb, oddNumb, zero;
+	cout << "Please enter 20 integers, positive, negative, or zeros." << endl;
+	evenNumb = 0, oddNumb = 0, zero = 0;
+	do
+	{
+		cin >> numb;
+		if (evenNumb + zero + oddNumb == 0) // purpose to put when total numb =0 is the following statement to execute once for first time only
+		{
+		cout << "The numbers you entered are :" << endl;
+		}
+		cout << numb << " ";// the " " is to let each numb has space between themselves
+		if (numb % 2 == 0)
+			++evenNumb;
+		else
+			++oddNumb;
+		if (numb == 0)
+			++zero;
+	} while (oddNumb + evenNumb < 20);// this does not include zero beacuse zero will be also counted in evenNumb.
+		cout << "\nThere are " << evenNumb << "evens, which includes " << zero << "zeros.\n";
+	cout << "The number of odd numbers is " << oddNumb << endl;
+	cout << "Khaw Teng Xian B031910447 ";
+	system("pause");
+	return 0;
+}
