@@ -1,0 +1,18 @@
+//This program will print your name.
+
+#include <iostream>
+#include <string>
+#include <iomanip>
+using namespace std;
+int main()
+{
+	cout << "Please enter your name : ";
+	string name;
+	getline(cin, name);
+
+	cout << setfill('*') << setw(20) << "\n\n";
+	cout << "*" << setw(19) << "*" << endl << endl;
+	cout << "*" << name << "*" <<endl;
+		cout << "*" << setw(19) << "*" << endl << endl;
+	cout << setfill('*') << setw(20) << "\n\n";
+}
