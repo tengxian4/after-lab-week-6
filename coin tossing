@@ -8,7 +8,8 @@ using namespace std;
 
 int main()
 {
-	char tossing,random;
+	char tossing;
+	int random;
 	cout << "Please enter either 'H' or 'T'"<< endl;
 	cin >> tossing;
 	while (tossing != 'H' && tossing != 'T')
