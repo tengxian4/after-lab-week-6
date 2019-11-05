@@ -1,0 +1,57 @@
+//This program is to calculate the average of a group of test scores.
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+void getScore(double& testScore, double& sumOfTestScore);
+void calcAverage(double testScoreHigh);
+int findLowest(double &testScore, double testScorehigh = 0, double sumTestScoreHigh, double testScoreLow);
+
+void main()
+{
+	double testScore, testScoreHigh=0;
+	for (int i = 1; i <= 5; i++)
+	{
+		
+		getScore(double& testScore, double& sumOfTestScore);
+		
+		calcAverage(testScore, testScoreHigh);
+		
+	}
+	
+}
+void getScore(double& testScore,double& sumOfTestScore)
+{
+	double testScore, double sumOfTestScore = 0;;
+	cout << "Please enter the test score : ";
+	cout << "The test score shouldn't lower than 0 or higher than 100.";
+	cin >> testScore;
+	sumOfTestScore += testScore;
+	while (testScore > 0 && testScore < 100)
+	{
+		cout << "invalid input. Please enter test score between 0 and 100";
+		cin >> testScore;
+	}
+
+}
+void calcAverage(double testScoreHigh, double& sumOfTestScore)
+{
+	int findLowest(double &testScore);
+
+	if (int h = 1; h <= 4; h++)
+	{		
+		if (testScore > testScoreHigh)
+		{
+			testScoreHigh = testScore;
+			sumTestScoreHigh += testScoreHigh;
+		}
+
+	}
+	}
+	cout << "The average of the 4 highest test scores is " << sumTestScoreHigh / 4;
+	
+}
+int findLowest(double sumTestScoreHigh,double testScoreLowest , double& sumOfTestScore)
+{
+	testScoreLowest = sumOfTestScore - sumTestScoreHigh;
+	cout << "Lowest test score is " << testScoreLowest;
+}
