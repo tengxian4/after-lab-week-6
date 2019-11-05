@@ -10,7 +10,7 @@ int main()
 {
 	char tossing;
 	int random;
-	cout << "Please enter either 'H' or 'T'"<< endl;
+	cout << "Please enter either 'H' or 'T'" << endl;
 	cin >> tossing;
 	while (tossing != 'H' && tossing != 'T')
 	{
@@ -18,22 +18,22 @@ int main()
 		cin >> tossing;
 	}
 
-	random =  rand() % 1;// to generte between 1 and 2
+	random = rand() % 1;// to generte between 1 and 2
 	if (random == 1)
 	{
-		if (tossing ==' H')
-			cout << "You win"; 
+		if (tossing == 'H')
+			cout << "You win";
 		else
 			cout << "you lose";
 	}
 	if (random == 0)
 	{
-		if (tossing ==' T')
+		if (tossing == 'T')
 			cout << "You win";
 		else
 			cout << "you lose";
 	}
 
 	cout << endl;
-    return 0;
+	return 0;
 }
