@@ -1,0 +1,34 @@
+// This program is a coin tossing program and user guess the outcome of the coin tossing.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main()
+{
+	char tossing,random;
+	cout << "Please enter either 'H' or 'T'"<< endl;
+	cin >> tossing;
+	while (tossing != 'H' && tossing != 'T')
+	{
+		cout << "Invalid input.Please enter H or T only." << endl;
+		cin >> tossing;
+	}
+
+	random =  rand() % 1;// to generte between 1 and 2
+	if (random == 1)
+	{
+		if (tossing ==' H')
+			cout << "You win"; 
+		else
+			cout << "you lose";
+	}
+	if (random == 0)
+	{
+		if (tossing ==' T')
+			cout << "You win";
+		else
+			cout << "you lose";
+	}
