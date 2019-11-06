@@ -1,0 +1,55 @@
+// This program is a geometry calculator. 
+
+#include "pch.h"
+#include <iostream>
+using namespace std;
+int main()
+{
+	int radius, length, width, height;
+	char choice;
+
+	do
+	{
+		cout << "Geometry calculator\n";
+		cout << "1. Calculate the Area of a Circle\n";
+		cout << "2. Calculate the Area of a Rectangle\n";
+		cout << "3. Calculate the Area of a Triangle\n";
+		cout << "4. Quit\n Enter your choice(1-4): ";
+		cin >> choice;
+		switch (choice)
+		{
+		case  '1': cout << "Please enter the radius of the circle.\n ";
+			cin >> radius;
+			if (radius < 0)
+			{
+				cout << "Pls enter the valid input ";
+				break;
+			}
+			cout << radius * radius*3.14159 << endl;
+			break;
+
+		case '2':
+		{ cout << "Please enter the length and width of the rectangle:\n";
+		cin >> length >> width;
+		if (length < 0 || width < 0)
+			break;
+		cout << length * width << endl;
+		break;
+		}
+		case'3':
+		{	cout << "Please enter length of triangle's base and its height:\n";
+		cin >> length >> height;
+		if (length < 0 || height < 0)
+			break;
+		cout << 1 / 2 * length*height << endl;
+		break;
+		}
+		case '4':cout << "Exit Menu" << endl ;
+			break;
+		default: cout << "Please insert valid input.(1-4)" << endl;
+		}
+	} while (choice != '4');
+	cout << "TQ";
+	return 0;
+
+}
