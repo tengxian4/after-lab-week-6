@@ -3,24 +3,24 @@
 #include <iostream>
 using namespace std;
 void getScore(double& testScore, double& sumOfTestScore);
-void calcAverage(double testScoreHigh);
-int findLowest(double &testScore, double testScorehigh = 0, double sumTestScoreHigh, double testScoreLow);
+void calcAverage(double testScore, double testScoreHigh, double& sumOfTestScore, double&  sumOfHighTestScore);
+int findLowest(double sumOfHighTestScore, double testScoreLowest, double& sumOfTestScore);
 
 int main()
 {
-	double testScore, testScoreHigh = 0, sumOfTestScore =0 ,sumOfHighTestScore =0;
+	double testScore, testScoreHigh = 0, sumOfTestScore = 0, sumOfHighTestScore = 0;
 	cout << "The test score shouldn't lower than 0 or higher than 100.";
 	for (int i = 1; i <= 5; i++)
 	{
-		getScore(testScore,sumOfTestScore);
-		calcAverage(testScore,testScoreHigh, sumOfTestScore, sumOfHighTestScore);
+		getScore(testScore, sumOfTestScore);
+		calcAverage(testScore, testScoreHigh, sumOfTestScore, sumOfHighTestScore);
 	}
 }
 void getScore(double& testScore, double& sumOfTestScore)
 {
 	cout << "Please enter the test score : ";
 	cin >> testScore;
-	
+
 	while (testScore < 0 || testScore > 100)
 	{
 		cout << "invalid input. Please enter test score between 0 and 100" << endl;
@@ -28,24 +28,28 @@ void getScore(double& testScore, double& sumOfTestScore)
 	}
 	sumOfTestScore += testScore;
 }
-void calcAverage(double testScore, double testScoreHigh, double& sumOfTestScore,double& sumOfHighTestScore)
-{		
+void calcAverage(double testScore, double testScoreHigh, double& sumOfTestScore,double&  sumOfHighTestScore)
+{
+	int k;
+	double testScoreLowest;
 	for (int j = 0; j < 1; j++)
 	{
 		testScoreHigh = testScore;
 	}
-	if (testScore < testScoreHigh)
-	{
-		testScoreHigh=testScore ;
+	if (testScore > testScoreHigh)
+	{		
+		testScoreHigh = testScore;
 		sumOfHighTestScore += testScoreHigh;
-
+		
 	}
 
-cout << "The average of the 4 highest test scores is " << sumOfHighTestScore / 4;
-
+	cout << "The average of the 4 highest test scores is " << sumOfHighTestScore / 4;
+	findLowest(sumOfHighTestScore, sumOfTestScore, testScoreLowest);
+	
 }
-int findLowest(double sumTestScoreHigh, double testScoreLowest, double& sumOfTestScore)
+int findLowest(double sumOfHighTestScore, double testScoreLowest, double& sumOfTestScore)
 {
-	testScoreLowest = sumOfTestScore - sumTestScoreHigh;
+	testScoreLowest = sumOfTestScore - sumOfHighTestScore;
 	cout << "Lowest test score is " << testScoreLowest;
+	return 0;
 }
