@@ -8,6 +8,10 @@
 using namespace std;
 int main()
 {
+	int a(0); // declaration - new way of it - check this with other compiler
+	cout << a << endl;
+	int ans{ 1 };// for new compiler will support this , for visual studio also support
+	cout << ans << endl;
 	double j = 1.5, circle;
 	circle = PI * pow(j, 2);
 	cout << "\n\nThe area of this circle is " << circle << "\n\n";
