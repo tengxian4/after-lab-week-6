@@ -15,8 +15,8 @@ int main()
 		getScore(testScore, sumOfTestScore);
 		calcAverage(testScore, sumOfTestScore, testScoreLowest, averageFourHighest);
 	}
-	cout << "Average of four highest number is " << averageFourHighest;
-	cout << "The lowest test score that will be drop is " << testScoreLowest;
+	cout << "Average of four highest number is " << averageFourHighest << endl;
+	cout << "The lowest test score that will be drop is " << testScoreLowest << endl;
 }
 void getScore(double& testScore, double& sumOfTestScore)
 {
@@ -33,16 +33,13 @@ void getScore(double& testScore, double& sumOfTestScore)
 }
 void calcAverage(double testScore, double& sumOfTestScore,  double& testScoreLowest, double& averageFourHighest)
 {
-
 	findLowest(testScore, testScoreLowest);
-	cout << "the lowest test score is" << testScoreLowest << endl;
 	averageFourHighest = (sumOfTestScore - testScoreLowest) / 4;
 }
 int findLowest(double testScore,double& testScoreLowest)
 {
 	for (static int j = 0; j < 1; j++)
 		testScoreLowest = testScore;
-
 	if (testScoreLowest > testScore)
 		testScoreLowest = testScore;
 	return testScoreLowest;
