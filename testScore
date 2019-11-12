@@ -4,11 +4,11 @@
 using namespace std;
 void getScore(double& testScore, double& sumOfTestScore);
 void calcAverage(double testScore, double& sumOfTestScore, double& averageFourHighest, double& testScoreLowest);
-int findLowest(double testScore, double& testScoreLowest, double& sumOfTestScore);
+int findLowest(double testScore, double& testScoreLowest);
 
 int main()
 {
-	double testScore, testScoreHigh = 0, sumOfTestScore = 0, sumOfHighTestScore = 0,averageFourHighest, testScoreLowest;
+	double testScore, testScoreHigh = 0, sumOfTestScore = 0, sumOfHighTestScore = 0, averageFourHighest, testScoreLowest;
 	cout << "The test score shouldn't lower than 0 or higher than 100." << endl;
 	for (int i = 1; i <= 5; i++)
 	{
@@ -31,19 +31,19 @@ void getScore(double& testScore, double& sumOfTestScore)
 	sumOfTestScore += testScore;
 
 }
-void calcAverage(double testScore,double& sumOfTestScore,double& averageFourHighest,double& testScoreLowest)
+void calcAverage(double testScore, double& sumOfTestScore, double& averageFourHighest, double& testScoreLowest)
 {
-	
-	findLowest(testScore, testScoreLowest, sumOfTestScore);
-	averageFourHighest = (sumOfTestScore - testScoreLowest)/4;
+
+	findLowest(testScore, testScoreLowest);
+	averageFourHighest = (sumOfTestScore - testScoreLowest) / 4;
 }
-int findLowest(double testScore , double& testScoreLowest, double& sumOfTestScore)
+int findLowest(double testScore,double& testScoreLowest)
 {
-	for (int j = 0; j < 1; j++)
+	for (static int j = 0; j < 1; j++)
 		testScoreLowest = testScore;
+
 	if (testScoreLowest > testScore)
 		testScoreLowest = testScore;
-	cout << "lowest test score :" << testScoreLowest << endl;
-	return testScoreLowest;
 	
+	return testScoreLowest;
 }
