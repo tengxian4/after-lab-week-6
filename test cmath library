@@ -1,0 +1,22 @@
+// test cmath library
+//
+
+#include "stdafx.h"
+#include <iostream>
+
+#define PI 3.142
+using namespace std;
+int main()
+{
+	double j = 1.5, circle;
+	circle = PI * pow(j, 2);
+	cout << "\n\nThe area of this circle is " << circle << "\n\n";
+	cout << "abs (9.5) =" <<  abs(9.5) << endl;
+	cout <<"floor(9.5) =" << floor(9.5) << endl;
+	cout << "floor(-9.5) =" <<floor(-9.5) << endl;
+	cout << "ceil (8.5)= "<< ceil(8.5) << endl;
+	cout << "ceil(-8.5) = " <<ceil(-8.5) << endl;
+	cout << "sqrt (pow (6,4)) =" << sqrt(pow(6, 4)) << endl;
+	return 0;
+}
+
