@@ -14,8 +14,15 @@ int main()
 	for (int i = 0; i < 6; i++)
 		cout << towns[i] << setw(5)<< i << endl;
 	int distance[5][5] = { {258} ,{43,301},{475,217,518},{876,616,918,401},{623,365,667,148,246} };
-	cout << "Please enter the number of 2 towns : ";
+	cout << "Please enter the number of 2 towns \n";
+	cout << "The town number 1 must larger than number 2 \n" << "Please enter :";
 	int i, j;
 	cin >> i >> j;
+	while (i < j)
+	{
+		cout << "Invalid. The town number 1 must larger than number 2 \n" << "Please enter :";
+		cin >> i >> j;
+	}
 	cout << "The distance between " << towns[i] << " and " << towns[j] << " is " << distance[i-1][j];
+	return 0;
 }
