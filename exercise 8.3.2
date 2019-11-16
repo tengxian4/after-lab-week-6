@@ -1,0 +1,21 @@
+// this is a program show distance between two towns.
+//
+
+#include "pch.h"
+#include <iostream>
+#include <string>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+	string towns[6] = { "Alor Setar","Ipoh","Kangar","Kuala Lumpur","Mersing","Melaka"};
+	cout << "Towns" << setw(10) << "Number" << endl;
+	for (int i = 0; i < 6; i++)
+		cout << towns[i] << setw(5)<< i << endl;
+	int distance[5][5] = { {258} ,{43,301},{475,217,518},{876,616,918,401},{623,365,667,148,246} };
+	cout << "Please enter the number of 2 towns : ";
+	int i, j;
+	cin >> i >> j;
+	cout << "The distance between " << towns[i] << " and " << towns[j] << " is " << distance[i-1][j];
+}
