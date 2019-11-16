@@ -1,9 +1,10 @@
 // This program is a coin tossing program and user guess the outcome of the coin tossing.
 //
 
-#include "stdafx.h"
+#include "pch.h"
 #include <iostream>
 #include <cstdlib>
+#include <ctime>
 using namespace std;
 
 int main()
@@ -17,8 +18,9 @@ int main()
 		cout << "Invalid input.Please enter H or T only." << endl;
 		cin >> tossing;
 	}
-
-	random = rand() % 1;// to generte between 1 and 2
+	random = time(0);
+	srand(random);
+	random = rand() % 2;// to generte between 1 and 2
 	if (random == 1)
 	{
 		if (tossing == 'H')
