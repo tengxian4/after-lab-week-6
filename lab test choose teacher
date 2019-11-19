@@ -37,7 +37,7 @@ break;
 else
 cout << "Invalid input. Please enter A or B or C or D or E or F.\n";
 }
-} while (choice!='f'||choice !='F');
+} while (choice!='f'&&choice !='F');
 cout << "TQ";
 return 0;
 }
