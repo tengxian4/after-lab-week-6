@@ -1,0 +1,43 @@
+// This program display the teacher choosen by student
+//
+#include "stdafx.h"
+#include <iostream>
+#include <iomanip>
+using namespace std;
+int main()
+{
+char choice;
+do
+{
+cout << "Choice Teacher\n";
+cout << "A" << setw(15) << "Ali\n";
+cout << "B" << setw(15) << "Bala\n";
+cout << "C" << setw(15) << "Chan\n";
+cout << "D" << setw(15) << "Dollah\n";
+cout << "E" << setw(15) << "Ema\n";
+cout << "F" << setw(18) << "Exit the program\n";
+cout << "Please enter the teacher you wish to follow\n";
+cin >> choice;
+{
+if (choice == 'A' || choice == 'a')
+cout << "You have choosen Teacher Ali\n ";
+else if (choice == 'B' || choice == 'b')
+cout << "You have choosen Teacher Bala\n";
+else if (choice == 'C' || choice == 'c')
+cout << "You have choosen Teacher Chan\n";
+else if (choice == 'D' || choice == 'd')
+cout << "You have choose Teacher Dollah\n ";
+else if (choice == 'E' || choice == 'e')
+cout << "You have choosen Teacher Ema \n";
+else if (choice == 'F' || choice == 'f')
+{
+cout << "TQ for using the program\n";
+break;
+}
+else
+cout << "Invalid input. Please enter A or B or C or D or E or F.\n";
+}
+} while (choice!='f'||choice !='F');
+cout << "TQ";
+return 0;
+}
