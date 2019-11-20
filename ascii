@@ -1,0 +1,16 @@
+// This program display the characters for each ASCII code from 32 to 127
+
+#include "pch.h"
+#include <iostream>
+using namespace std;
+int main()
+{
+	int i = 0;
+	for (int c = 32; c <= 127; c++)
+	{
+		cout << (char)c << " ";
+		i++;
+		if (i % 16 == 0)
+			cout << endl;
+	}
+}
