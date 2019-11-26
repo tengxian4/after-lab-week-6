@@ -1,0 +1,25 @@
+//step by step example pg148. writing data to a file using while loop
+#include "stdafx.h"
+#include <iostream>
+#include <cstdlib>
+#include <fstream>
+
+using namespace std;
+void main()
+{
+	char name[25];
+	char id[5];
+	float m1, m2, m3, m4, m5;
+	ofstream outputFile("studentMarks.txt", ios::out);
+	if (!outputFile)
+	{
+		cerr << "File could not be opened \n";
+		exit(1);
+	}
+	cout << "Please enter student id, name and five marks : \n";
+	cout << "\n Press<crtl>+Z to stop.\n ";
+	while (cin >> id >> name >> m1 >> m2 >> m3 >> m4 >> m5)
+	{
+		outputFile << id << " " << name << " " << m1 << " " << m2 << " " << m3 << " " << m4 << " " << m5 << endl;
+	}
+}
