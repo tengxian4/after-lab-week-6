@@ -1,0 +1,40 @@
+//This program read 5 pollution data and total it up 
+// 
+#include "pch.h"
+#include <iostream> 
+using namespace std;
+
+struct pollutionData
+{
+	char name[20];
+	int id;
+	double reading[5];
+	double total;
+};
+
+int main()
+{
+	pollutionData area;
+	double total = 0.00;
+	cout << "Please enter the name of the area(with maximum character is 20) :";
+	cin >> area.name;
+	cout << "\nPlease enter the area's id number :";
+	cin >> area.id;
+	cout << "\nPlease enter five pollution readings :";
+	for (int i = 0; i < 5; i++)
+	{
+		cout << "\nReading Number " << i + 1 << " : ";
+		cin >> area.reading[i];
+		total += area.reading[i];
+	}
+	area.total = total;
+	cout << "\nThe area's name is " << area.name;
+	cout << "\nThe area's id number is " << area.id;
+	for (int i = 0; i < 5; i++)
+	{
+		cout << "\nReading number " << i + 1 << " that you have enter is " << area.reading[i];
+	}
+	cout << "\nAnd the total of five readings is " << area.total;
+	return 0;
+}
+
