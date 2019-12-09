@@ -1,0 +1,31 @@
+//Display the output given in exam
+#include "pch.h"
+#include <iostream>
+#include <cmath>
+using namespace std;
+void tajuk()
+{
+	cout << "sile masukkna satu nombor :" ;
+
+}
+int kuasaDua_nombor(int i)
+{
+	return pow(10, i);
+}
+void turutan_nombor()
+{
+	int ali;
+	int x;
+	tajuk();
+	cin >> ali;
+	tajuk();
+	cin >> x;
+	cout << "\nTurutan nombor adalah seperti di bawah: " << endl;
+	cout << ali << "\t" << x << "\t" << kuasaDua_nombor(1) << "\t" << kuasaDua_nombor(2) << "\n";
+
+}
+void main()
+{
+	turutan_nombor();
+}
+
