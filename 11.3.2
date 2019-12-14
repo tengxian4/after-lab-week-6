@@ -1,0 +1,50 @@
+// This program use to read a filof students in class of 20
+#include "pch.h"
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+struct Data {
+	int studentID;
+	char Name[50];
+	double GPA;
+};
+void main()
+{
+	ifstream inputFile("studentDetails.txt", ios::in);
+	Data records;
+	Data store[20];
+	if (!inputFile)
+	{
+		cerr << "File could not be opened \n";
+		exit(1);
+	}
+	int i = 0;
+	while (inputFile >> records.studentID >> records.Name >> records.GPA)
+	{
+		int j = 0;
+
+		store[i].studentID = records.studentID;
+		while (records.Name[j] != '\0')
+		{
+			store[i].Name[j] = records.Name[j];
+			j++;
+		}
+		store[i].GPA = records.GPA;
+		i++;
+
+	}
+
+	for (int i = 0; i < 20; i++)
+	{
+		int j = 0;
+		cout << "The details in the file are " << store[i].studentID << " ";
+		while (store[i].Name[j] != '\0')
+		{
+			cout << store[i].Name[j];
+			j++;
+		}
+		cout << " " << store[i].GPA << endl;
+	}
+	
+}
