@@ -2,6 +2,7 @@
 #include "pch.h"
 #include <iostream>
 #include <fstream>
+#include<cstring>
 
 using namespace std;
 struct Data {
@@ -25,26 +26,16 @@ void main()
 		int j = 0;
 
 		store[i].studentID = records.studentID;
-		while (records.Name[j] != '\0')
-		{
-			store[i].Name[j] = records.Name[j];
-			j++;
-		}
+		strcpy_s(store[i].Name, records.Name);
 		store[i].GPA = records.GPA;
 		i++;
 
 	}
-
+	inputFile.close();// must rmb to put!!!!!!!!!!!!!!!!!  :(    :)
 	for (int i = 0; i < 20; i++)
 	{
 		int j = 0;
-		cout << "The details in the file are " << store[i].studentID << " ";
-		while (store[i].Name[j] != '\0')
-		{
-			cout << store[i].Name[j];
-			j++;
-		}
-		cout << " " << store[i].GPA << endl;
+		cout << "The details in the file are " << store[i].studentID << " "<< store[i].Name << " " << store[i].GPA << endl;
 	}
 	
 }
