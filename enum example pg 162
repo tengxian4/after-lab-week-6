@@ -1,0 +1,13 @@
+//example 2: The Implementation of Enumerated type 
+#include "pch.h"
+#include <iostream>
+using namespace std;
+enum hari{AHAD=1,ISNIN,SELASA,RABU,KHAMIS,JUMAAT,SABTU};
+typedef enum hari HARI;
+void main()
+{
+	HARI myDays;
+	for (myDays = AHAD; myDays <= SABTU; myDays=(HARI)(myDays+1))
+		cout << "Hari : " << myDays << " , ";
+
+}
