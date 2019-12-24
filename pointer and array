@@ -1,0 +1,24 @@
+// using pointers for referring to array elements
+#include "pch.h"
+#include <iostream>
+using namespace std;
+int main()
+{
+	int b[] = { 10,20,30,40 }, k, offset;
+	int *bPtr = b;
+	cout << "Array b printed with :\n";
+	cout << "Array subscript with notation\n";
+	for (k = 0; k < 4; k++)
+		cout << "b[" << k << "]=" << b[k] << "\n";
+	cout << "\nPointer/offset notation where\n ";
+	cout << "the pointer is the array name\n";
+	for (offset = 0; offset < 4; offset++)
+		cout << "*(b+" << offset << ")=" << *(b + offset) << "\n";
+	cout << "Pointer subscript nontation\n";
+	for (k = 0; k < 4; k++)
+		cout << "bPtr[" << k << "]=" << bPtr[k] << "\n";
+	cout << "\nPointer/offset notation\n";
+	for (offset = 0; offset < 4; offset++)
+		cout << "*(bPtr+" << offset << ")=" << *(bPtr + offset) << "\n";
+	return 0;
+}
