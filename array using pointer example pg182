@@ -11,7 +11,7 @@ int main()
 		cout << "Enter temperature for day" << ++day;
 		cout << " (0 to terminate : )";
 		cin >> *ptr;
-	}while ((*ptr++ > 0));
+	}while ((*ptr++) > 0);
 	ptr = temp;//reset pointer to array
 	num = day - 1;
 	for (day = 0; day < num; day++)
