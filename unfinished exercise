@@ -1,0 +1,41 @@
+//This program  show usage of setw and setfill
+#include "pch.h"
+#include <iostream>
+#include <iomanip>
+using namespace std;
+void getInput(double *, double *, char&);
+int calculate(double*,double *,char&);
+
+int main()
+{
+	double num1, num2;
+	char operation;
+	//setw need smtg on RHS to start the char coz the char is start from RHS 
+	//if use endl, it will execute the endl first after that only execute the char 
+	cout << setw(10) << "MENU" << endl << setw(6) << " " << setw(5) << setfill('*') << "\t";//rmb setw need smtg to follow behind to fill in on most Right hand side
+	cout << setw(10) << setfill(' ') << "\n";// if no use this setfill(' '), the following setw will fill with * 
+	cout << "+: Add\n" << "-: substract\n" << "*: Multiply\n" << "/: Divide\n" << "x: Exit\n";
+	getInput(&num1, &num2, operation);
+	calculate(&num1, &num2, operation);
+}
+void getInput(double *numb1, double *numb2, char& operation)
+{
+	cout << "Enter your choice : ";
+	cin >> operation;
+	cout << "\nEnter first number :  ";
+	cin >> *numb1;
+	cout << "\nEnter second number : ";
+	cin >> *numb2;
+
+}
+int calculate(double *numb1, double *numb2, char &operation)
+{
+	if (operation == '+')
+		return numb1 + numb2;
+	else if (operation == '-')
+		return numb1 - numb2;
+	else if (operation == '*')
+		return numb1 * numb2;
+	else if (operation == '/')
+		return numb1 / numb2;
+}
