@@ -4,7 +4,7 @@
 #include <iomanip>
 using namespace std;
 void getInput(double *, double *, char*);
-int calculate(double*, double *, char*);
+double calculate(double*, double *, char*);
 void displayResult(double *, double *, char*, double);
 int main()
 {
@@ -35,7 +35,7 @@ void getInput(double *numb1, double *numb2, char* operation)
 	cin >> *numb2;
 
 }
-int calculate(double *numb1, double *numb2, char* operation)
+double calculate(double *numb1, double *numb2, char* operation)// use double to return value with decimal points
 {
 	if (*operation == '+')
 		return (*numb1 + *numb2);
