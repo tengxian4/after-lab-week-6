@@ -1,11 +1,11 @@
-// exercise 12.3.1. This is a program of calculator (pointer)
+// exercise 12.3.1. This is a program of calculator 
 #include "pch.h"
 #include <iostream>
 #include <iomanip>
 using namespace std;
-void getInput(double *, double *, char&);
-int calculate(double*, double *, char&);
-void displayResult(double *, double *, char&, double);
+void getInput(double *, double *, char*);
+int calculate(double*, double *, char*);
+void displayResult(double *, double *, char*, double);
 int main()
 {
 	double num1, num2, answer;
@@ -15,34 +15,38 @@ int main()
 	cout << setw(10) << "MENU" << endl << setw(6) << " " << setw(5) << setfill('*') << "\t";//rmb setw need smtg to follow behind to fill in on most Right hand side
 	cout << setw(10) << setfill(' ') << "\n";// if no use this setfill(' '), the following setw will fill with * 
 	cout << "+: Add\n" << "-: substract\n" << "*: Multiply\n" << "/: Divide\n" << "x: Exit\n";
-	getInput(&num1, &num2, operation);
-	answer = calculate(&num1, &num2, operation);
-	displayResult(&num1, &num2, operation, answer);
+	do
+	{
+		getInput(&num1, &num2, &operation);
+		answer = calculate(&num1, &num2, &operation);
+		displayResult(&num1, &num2, &operation, answer);
+	} while (operation != 'x');
 	return 0;
 }
-void getInput(double *numb1, double *numb2, char& operation)
+void getInput(double *numb1, double *numb2, char* operation)
 {
 	cout << "Enter your choice : ";
-	cin >> operation;
-	cout << "\nEnter first number :  ";
+	cin >> *operation;
+	if (*operation == 'x')
+		exit(0);
+	cout << "Enter first number :  ";
 	cin >> *numb1;
-	cout << "\nEnter second number : ";
+	cout << "Enter second number : ";
 	cin >> *numb2;
 
 }
-int calculate(double *numb1, double *numb2, char& operation)
+int calculate(double *numb1, double *numb2, char* operation)
 {
-	if (operation == '+')
+	if (*operation == '+')
 		return (*numb1 + *numb2);
-	else if (operation == '-')
+	else if (*operation == '-')
 		return (*numb1 - *numb2);
-	else if (operation == '*')
+	else if (*operation == '*')
 		return (*numb1**numb2);
-	else if (operation == '/')
+	else if (*operation == '/')
 		return (*numb1 / *numb2);
-
 }
-void displayResult(double *numb1, double *numb2, char &operation, double answer)
+void displayResult(double *numb1, double *numb2, char *operation, double answer)
 {
-	cout << *numb1 << " " << operation << *numb2 << " = " << answer;
+	cout << *numb1 << " " << *operation << *numb2 << " = " << answer << endl;
 }
