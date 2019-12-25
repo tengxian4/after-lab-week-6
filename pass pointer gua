@@ -1,0 +1,19 @@
+// pass pointer gua
+#include "pch.h"
+#include <iostream>
+using namespace std;
+void pass( char *s)
+{
+
+	cout << *s;
+}
+int main()
+{
+	char *s;
+	s = new char[2];
+	cin >> s;
+	
+	pass(s);
+	delete[]s;
+	s = 0;
+}
