@@ -1,0 +1,16 @@
+//2018/19 question 1b
+#include "pch.h"
+#include <iostream>
+
+using namespace std;
+int main()
+{
+	int ARR[][2] = { { 20,57},{40,30},{35,37} };
+	
+	for (int j = 0; j < 2; j++)
+	{
+		for (int i = 0; i < 3; i++)
+			cout << ARR[i][j] << " ";
+		cout << "\n";
+	}
+}
