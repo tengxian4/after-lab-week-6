@@ -1,0 +1,22 @@
+// question 3b improvise with array struct and initialization 
+#include "pch.h"
+#include <iostream>
+
+
+using namespace std;
+
+int main()
+{
+	struct cars {
+		char name[100];
+		char type[100];
+		char fuel[100];
+		int price;
+	};
+	cars car[2];
+	car[0]= { "Perdua axia","mini car" ,"petrol",123456 };
+	cout << car[0].name<< endl;
+	cout << car[0].type << endl;
+	cout << car[0].fuel << endl;
+	cout << car[0].price << endl;
+}	
