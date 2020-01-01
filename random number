@@ -1,0 +1,14 @@
+//random number format
+#include "pch.h"
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+int main()
+{
+	int i;
+	i = time(0);
+	srand(i);
+	i = rand();//rand()%15 to limit between 15 
+	cout << i;
+}
