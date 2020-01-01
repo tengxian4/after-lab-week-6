@@ -1,0 +1,16 @@
+// question 2b
+#include "pch.h"
+#include <iostream>
+
+using namespace std;
+int main()
+{
+	char C[] = "programming";
+	int p, i;
+	for (i = 5; i >= 0; i--)
+		cout << C[i];
+	cout << endl;
+	for (i = 5, p = 9; i < p; p--, i++)
+		cout << C[p];
+	cout << endl;
+}
