@@ -16,3 +16,23 @@ int main()
 	
 	cout << Getlength();
 }
+
+
+// question 2c using pointer to pass the array of char 
+#include "pch.h"
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+int Getlength(char *sentences)
+{
+	
+	int length = strlen(sentences); 
+	return length;
+}
+int main()
+{
+	char sentences[1000];
+	cin.getline(sentences, 1000);
+	cout << Getlength(sentences);
+}
