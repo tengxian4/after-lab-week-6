@@ -1,0 +1,17 @@
+// alphabetical order using string , question 2c
+#include "pch.h"
+#include <iostream>
+
+#include <string>
+using namespace std;
+int main()
+{
+	/*char W1[15] = "MYSTIQUE";
+	char W2[5] = "MIST"; when using this array of char use strcmp */
+	string W1 = "MYSTIQUE";
+	string W2 = "MIST";
+	if (W1 < W2)// can be apply on string only
+		cout << W1 << " " << W2;
+	else
+		cout << W2 << " " << W1;
+}
