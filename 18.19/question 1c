@@ -1,0 +1,36 @@
+//2018/19 question 1c, This program receives 20 integers and print number of positive, negative, odd, even, zero numbers.
+#include "pch.h"
+#include <iostream>
+
+using namespace std;
+int main()
+{
+	int numb[20],remainder;
+	cout << "Pls insert 20 integers "<< endl;
+	for (int i = 0; i < 20; i++)
+	{
+		cout << "interger " << 1 + i <<": ";
+		cin >> numb[i];
+	}
+	int noPositive = 0, noNegative = 0, Odd = 0, Even = 0, Zero = 0;
+	for (int i = 0; i < 20; i++)
+	{
+		if (numb[i] > 0)
+			noPositive++;
+		else if (numb[i] < 0)
+			noNegative++;
+		remainder = numb[i] % 2;
+		if (remainder == 0)
+			Even++;
+		else
+			Odd++;
+		if (numb[i] == 0)
+			Zero++;
+	}
+	cout << "NUmber of positive numbers: " << noPositive;
+	cout << "\nNumber of negative numbers: " << noNegative;
+	cout << "\nNumber of odd numbers: " << Odd;
+	cout << "\nNUmber of even numbers: " << Even;
+	cout << "\nNUmber of zero numbers: " << Zero;
+	return 0;
+}
