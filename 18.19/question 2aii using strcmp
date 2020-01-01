@@ -1,0 +1,15 @@
+// alphabetical order using strcmp , string manipulation function 
+#include "pch.h"
+#include <iostream>
+using namespace std;
+int main()
+{
+	char W1[15] = "MYSTIQUE";
+	char W2[5] = "MIST";
+	int n =strcmp(W1, W2);
+	if (n < 0)
+		cout << W1 << " " << W2;
+	else if (n>0)
+		cout << W2 << " " << W1;
+	
+}
