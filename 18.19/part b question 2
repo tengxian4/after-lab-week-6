@@ -1,0 +1,32 @@
+#include "pch.h"
+#include <iostream>
+#include <string>
+#include <fstream>
+
+using namespace std;
+
+int main()
+{
+	string name;
+	double T[5],total=0,avg;
+	ifstream inputFile;
+	inputFile.open("Test.txt");
+	if (!inputFile)
+	{
+		cerr << "file could not be opened\n";
+		exit(1);
+	}
+	inputFile >> name >> T[0] >> T[1] >> T[2] >> T[3] >> T[4];
+	inputFile.close();
+	for (int i = 0; i < 5; i++)
+		total += T[i];
+	avg = total / 5;
+	ofstream outputFile;
+	outputFile.open("testAvg.txt");
+	outputFile << "Student Name : " << name << endl << "Test Scores : ";
+	for (int i = 0; i < 5; i++)
+		outputFile << T[i] << " ";
+	outputFile << "\nAverage test scores " << avg;
+
+	
+}
