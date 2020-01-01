@@ -27,10 +27,10 @@ int main()
 		if (numb[i] == 0)
 			Zero++;
 	}
-	cout << "NUmber of positive numbers: " << noPositive;
+	cout << "Number of positive numbers: " << noPositive;
 	cout << "\nNumber of negative numbers: " << noNegative;
 	cout << "\nNumber of odd numbers: " << Odd;
-	cout << "\nNUmber of even numbers: " << Even;
-	cout << "\nNUmber of zero numbers: " << Zero;
+	cout << "\nNumber of even numbers: " << Even;
+	cout << "\nNumber of zero numbers: " << Zero;
 	return 0;
 }
