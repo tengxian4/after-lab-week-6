@@ -1,0 +1,16 @@
+#include "pch.h"
+#include <iostream>
+using namespace std;
+int main()
+{
+	int a, b, *ptrA, *ptrB;
+	ptrA = &a;
+	ptrB = &b;
+	cout << "pls enter a ";
+	cin >> a;
+	cout << "pls enter b ";
+	cin >> b;
+	cout << "value of ptrA " << *ptrA << " in address " << ptrA << endl;
+	cout << "value of ptrB " << *ptrB << " in address " << ptrB << endl;
+}
+
