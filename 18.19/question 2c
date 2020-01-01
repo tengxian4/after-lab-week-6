@@ -1,0 +1,18 @@
+// question 2c
+#include "pch.h"
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+int Getlength()
+{
+	char sentences[1000];
+	cin.getline(sentences, 1000);
+	int length = strlen(sentences); 
+	return length;
+}
+int main()
+{
+	
+	cout << Getlength();
+}
